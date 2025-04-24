@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeFit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <style>
+        .feature-container {
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card img {
+            max-height: 120px;
+            margin-bottom: 15px;
+        }
+        .feature-card h5 {
+            color: #333;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+        <header class="text-center my-5">
+            <img src="/images/logo.png" alt="WeFit Logo" style="max-height: 200px;">
+            <p class="mt-3">Gunakan alat ini untuk menghitung BMI, Body Fat, dan Kebutuhan Kalori Anda.</p>
+        </header>
+
+        <div class="feature-container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/bmi">
+                            <img src="/images/1.png" alt="BMI Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hitung BMI</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/fat">
+                            <img src="/images/2.png" alt="Fat Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hitung Lemak Tubuh</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/calories">
+                            <img src="/images/kalori.png" alt="Calories Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hitung Kalori</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/water">
+                            <img src="/images/4.png" alt="Water Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hitung Kebutuhan Air</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/whr">
+                            <img src="/images/3.png" alt="WHR Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hitung Rasio Pinggang-Pinggul</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/progress">
+                            <img src="/images/grafik.png" alt="Progress Illustration" class="img-fluid">
+                            <h5 class="mt-2">Lihat Grafik Perkembangan</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="/contact">
+                            <img src="/images/kontak.png" alt="Contact Illustration" class="img-fluid">
+                            <h5 class="mt-2">Hubungi Kami</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <a href="#" id="logout-link-home">
+                            <img src="/images/logout.png" alt="Log Out Illustration" class="img-fluid">
+                            <h5 class="mt-2">Log Out</h5>
+                        </a>
+                        <script src="/js/logout.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 bg-white">
+        <p>&copy; 2025 WeFit Indonesia</p>
+    </footer>
+</body>
+</html>
